@@ -324,6 +324,15 @@ theorem maximal_ineq_norm_countable (hmar : Martingale X 𝓕 P) (ε : ℝ≥0) 
       ∫ ω in {ω | (ε : ℝ) ≤ ⨆ i : Set.Iic n, ‖X i ω‖}, ‖X n ω‖ ∂P :=
   maximal_ineq_countable hmar.submartingale_norm (fun _ _ ↦ norm_nonneg _) ε n
 
+/-- **Doob's `L^p` inequality** for a countable index set (blueprint `lem:doob_Lp_countable`):
+`‖⨆ i ≤ n, Y i‖_p ≤ (p / (p - 1)) · ‖Y n‖_p` for a non-negative submartingale and `1 < p`.
+WIP: the layer-cake + Fubini + Hölder proof on top of `maximal_ineq_countable`. -/
+theorem maximal_ineq_Lp_countable (hsub : Submartingale Y 𝓕 P) (hnonneg : 0 ≤ Y)
+    {p : ℝ} (hp : 1 < p) (n : ι) :
+    eLpNorm (fun ω ↦ ⨆ i : Set.Iic n, Y i ω) (ENNReal.ofReal p) P
+      ≤ ENNReal.ofReal (p / (p - 1)) * eLpNorm (Y n) (ENNReal.ofReal p) P := by
+  sorry
+
 end Countable
 
 @[simp]
