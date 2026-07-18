@@ -61,6 +61,7 @@ public import BrownianMotion.StochasticIntegral.MathlibImports
 public import BrownianMotion.StochasticIntegral.MonotoneProcess
 public import BrownianMotion.StochasticIntegral.OptionalSampling
 public import BrownianMotion.StochasticIntegral.Predictable
+public import BrownianMotion.StochasticIntegral.PredictableRectangles
 public import BrownianMotion.StochasticIntegral.QuadraticVariation
 public import BrownianMotion.StochasticIntegral.SimpleProcess
 public import BrownianMotion.StochasticIntegral.SquareIntegrable
